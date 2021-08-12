@@ -17,7 +17,14 @@ steps:
     in:
       srr: SRR_array
       progress_bar: progress_bar
-    out: 
+    out:
       [fastq1, fastq2]
 
-outputs: []
+outputs:
+  fastq1files:
+    outputSource: fasterq-dump-scatter/fastq1
+    type: File[]
+
+  fastq2files:
+    outputSource: fasterq-dump-scatter/fastq2
+    type: File[]
